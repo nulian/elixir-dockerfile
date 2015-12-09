@@ -68,6 +68,8 @@ RUN echo "deb http://packages.erlang-solutions.com/ubuntu trusty contrib" >> /et
     git \
     unzip \
     build-essential \
+    mysql-server \
+    mysql-client \
     wget && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -84,5 +86,7 @@ RUN wget -q https://github.com/elixir-lang/elixir/releases/download/v1.1.1/Preco
 # Install local Elixir hex and rebar
 RUN /usr/local/bin/mix local.hex --force && \
     /usr/local/bin/mix local.rebar --force
+
+RUN service mysql start
 
 WORKDIR /
