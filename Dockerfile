@@ -1,4 +1,4 @@
-FROM elixir:1.6.5
+FROM elixir:1.7.3
 
 RUN set -xe \
 	&& apt-get update \
