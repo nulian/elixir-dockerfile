@@ -1,5 +1,5 @@
-FROM elixir:1.9
+FROM elixir:1.11
 
 RUN set -xe \
 	&& apt-get update \
-	&& apt-get install -y mariadb-client python rabbitmq-server imagemagick libgif7
+	&& apt-get install -y mariadb-client rabbitmq-server imagemagick libgif7
